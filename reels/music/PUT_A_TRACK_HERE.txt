@@ -1,0 +1,2 @@
+Drop a music bed named bed.mp3 in this folder; reel.html plays it under the loop.
+Keep it license-clean. Nothing here auto-publishes.

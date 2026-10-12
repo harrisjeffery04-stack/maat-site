@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Material Injustice Screener</title>
+<style>
+  :root {
+    --navy: #0B1A2F; --gold: #C9A227; --ink:#12100C;
+    --bg: #0d0f12; --panel:#15181d; --card:#1b1f26; --text:#E7E9EC; --gray:#9AA1AC; --line:#2a2f38;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65; }
+  header { background: #0a0c0f; padding: 1rem 2rem; display:flex; justify-content:space-between;
+    align-items:center; border-bottom: 1px solid var(--line); }
+  header .brand { font-weight: 700; font-size: 1.05rem; letter-spacing: 0.03em; color:#fff; }
+  header .brand span { color: var(--gold); }
+  header .working { font-size:0.72rem; color:var(--gray); }
+  .hero { background: radial-gradient(1200px 400px at 50% -10%, #1a2536, var(--bg));
+    padding: 4rem 2rem 3rem; text-align:center; border-bottom:1px solid var(--line); }
+  .hero h1 { font-size: 2.3rem; margin-bottom: 0.7rem; color:#fff; }
+  .hero .accent { color: var(--gold); }
+  .hero p { color: var(--gray); font-size: 1.1rem; max-width: 760px; margin: 0 auto; }
+  main { max-width: 980px; margin: 0 auto; padding: 3rem 1.5rem; }
+  .row { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:1.25rem; margin-bottom:2.5rem; }
+  .card { background: var(--card); border:1px solid var(--line); border-radius:14px; padding:1.6rem; }
+  .card h3 { color:#fff; font-size:1.1rem; margin-bottom:0.5rem; }
+  .card h3 .n { color:var(--gold); font-variant-numeric:tabular-nums; margin-right:0.4rem; }
+  .card p { color:var(--gray); font-size:0.93rem; }
+  .big { text-align:center; padding:2.2rem 1.5rem; background:var(--panel); border:1px solid var(--line);
+    border-radius:16px; margin-bottom:2.5rem; }
+  .big .stat { font-size:2.6rem; font-weight:700; color:var(--gold); }
+  .big .sub { color:var(--gray); font-size:0.95rem; margin-top:0.3rem; }
+  h2 { color:#fff; font-size:1.5rem; margin:0 0 1rem; }
+  .demo { background:#0a0c0f; border:1px solid var(--line); border-radius:12px; padding:1.4rem 1.6rem; margin-bottom:2.5rem; }
+  .demo .lead { border-left:3px solid var(--gold); padding:0.6rem 0 0.6rem 1rem; margin:0.9rem 0; }
+  .demo .lead .sev { font-size:0.72rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--gold); }
+  .demo .lead .rule { color:#fff; font-weight:600; font-size:0.96rem; }
+  .demo .lead .why { color:var(--gray); font-size:0.86rem; }
+  .demo .abstain { border-left:3px solid var(--gray); padding:0.6rem 0 0.6rem 1rem; margin:0.9rem 0; }
+  .demo .abstain .rule { color:var(--text); font-weight:600; font-size:0.96rem; }
+  .demo .abstain .why { color:var(--gray); font-size:0.86rem; }
+  .disclaimer { background:var(--panel); border:1px solid var(--line); border-radius:12px;
+    padding:1.3rem 1.5rem; font-size:0.86rem; color:var(--gray); }
+  .disclaimer strong { color:#fff; }
+  footer { text-align:center; padding:2.5rem 2rem; color:var(--gray); font-size:0.82rem; border-top:1px solid var(--line); }
+  .naming { background:#1a1508; border:1px solid #3d3212; border-radius:10px; padding:0.9rem 1.2rem;
+    font-size:0.82rem; color:#d8c47a; margin-bottom:2.5rem; }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">MATERIAL <span>INJUSTICE</span> SCREENER</div>
+  <div class="working">working name — final naming at the partner org's discretion</div>
+</header>
+
+<section class="hero">
+  <h1>The screener whose headline feature is a <span class="accent">correct&nbsp;no</span>.</h1>
+  <p>Point it at an intake queue. It tells you which case files carry a structural habeas ground
+     worth a lawyer pulling — and, just as usefully, which don't.</p>
+</section>
+
+<main>
+
+  <div class="naming">
+    <strong>Note on naming &amp; affiliation.</strong> This is an independent tool built by an
+    expert-witness-network-connected developer. It is offered <em>to</em> post-conviction and
+    wrongful-conviction review organizations for their evaluation; it does not imply affiliation with
+    or endorsement by any organization unless and until that organization agrees in writing.
+  </div>
+
+  <div class="row">
+    <div class="card"><h3><span class="n">1.</span>Reads the record</h3>
+      <p>Deterministic analysis of a case record. No LLM in the read path — the same input always
+         yields the same result.</p></div>
+    <div class="card"><h3><span class="n">2.</span>Flags the drift</h3>
+      <p>Names the <em>rule provisions</em> apt to drift below the federal habeas floor, with the
+         exact forcing authority — Martinez/Trevino, Coleman, Lee v. Kemna.</p></div>
+    <div class="card"><h3><span class="n">3.</span>Or abstains</h3>
+      <p>Where the text carries no drift marker, it says so. A correct abstention spends zero
+         attorney time — that is the point.</p></div>
+  </div>
+
+  <div class="big">
+    <div class="stat">6 lead · 1 abstain · 0 null</div>
+    <div class="sub">A live run of the screener. It leads on the two contributing factors that are both
+       high-prevalence and structurally detectable — official misconduct and inadequate legal defense —
+       and abstains on fact-level factors by design.</div>
+  </div>
+
+  <div class="big">
+    <div class="stat">74% · 96% · 100%</div>
+    <div class="sub">Validated against what courts actually did, not against itself: on 1,435 full-text
+       opinions, the ground the court reversed on is the screener's top pick 74% of the time, in its top
+       two 96%, in its top three 100% (resolved reversed set, N=50). Where fewer than five reversed
+       exemplars exist for a claim, it withholds a precision figure and says so. Re-run 2026-10-11.</div>
+  </div>
+
+  <div class="big">
+    <div class="stat">93.8% precision · 8.7% coverage</div>
+    <div class="sub">The underlying forcing gate on the Supreme Court validation set. It speaks on fewer
+       than one case in ten and is right when it does; roughly one committed call in sixteen is wrong —
+       which is exactly why every call is a lead for counsel to verify, never a verdict.</div>
+  </div>
+
+  <h2>What the output looks like</h2>
+  <div class="demo">
+    <div class="lead">
+      <div class="sev">Severe · vital-few</div>
+      <div class="rule">Rule 32.7(c)/(d) + 32.6(b) — no-counsel / specificity / summary-dismissal trap</div>
+      <div class="why">Drifts from Martinez v. Ryan; Trevino v. Thaler → measure how this bar was
+        applied in the target case.</div>
+    </div>
+    <div class="lead">
+      <div class="sev">Moderate · vital-few</div>
+      <div class="rule">Rule 32.2(a)(3)/(a)(5) — "could have been raised" defaults</div>
+      <div class="why">Drifts from Coleman v. Thompson; Lee v. Kemna → measure how this bar was applied.</div>
+    </div>
+    <div class="abstain">
+      <div class="rule">Rule 32.2(c) — one-year limitations bar → ABSTAIN</div>
+      <div class="why">No drift marker in the wording; any drift risk lives in application, not text.
+        The tool declines to flag it. That is a correct answer.</div>
+    </div>
+  </div>
+
+  <h2>How it's meant to be used</h2>
+  <p style="color:var(--gray); margin-bottom:2.5rem;">Each lead is an input to a lawyer's judgment,
+     never a substitute: here is a rule provision whose wording is apt to drift below the federal
+     habeas floor, and the exact authority that forces the question — you decide which files to pull.
+     The tool screens; licensed counsel decides. It offers no verdict and no prediction of any outcome.</p>
+
+  <div class="disclaimer">
+    <strong>Important.</strong> This is a research and triage screening tool. It surfaces structural
+    legal grounds for review by licensed attorneys and qualified legal organizations. It does
+    <strong>not</strong> give legal advice, does not predict whether any conviction will be overturned,
+    and is not a law firm or a substitute for legal representation. Every flagged lead requires
+    independent verification by a licensed attorney. Screening accuracy is reported at its
+    reproducible, tested tier and describes the underlying gate's precision on a labeled research
+    corpus, not a probability of exoneration in any individual case.
+  </div>
+</main>
+
+<footer>An independent screening tool · offered for evaluation to post-conviction review organizations ·
+  leads for licensed counsel, never verdicts</footer>
+</body>
+</html>
